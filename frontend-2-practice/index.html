@@ -1,14 +1,119 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Выбор даты и времени</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page">
-      <!-- Перенесите вашу верстку. Удалите статичные данные. Подключите скрипт -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор даты и времени | Hair Salon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <img src="images/logo.jpg" alt="Hair Salon" class="logo__img">
+            </a>
+            <nav class="nav">
+                <a href="#" class="nav__link">Услуги</a>
+                <a href="#" class="nav__link">Мастера</a>
+                <a href="#" class="nav__link">Отзывы</a>
+                <a href="#" class="nav__link">Контакты</a>
+                <a href="#" class="nav__link">О салоне</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="steps">
+        <div class="container steps__container">
+            <div class="step">
+                <span class="step__num">1</span>
+                <span class="step__name">Мастер</span>
+            </div>
+            <div class="step__line"></div>
+            <div class="step">
+                <span class="step__num">2</span>
+                <span class="step__name">Услуга</span>
+            </div>
+            <div class="step__line"></div>
+            <div class="step step--active">
+                <span class="step__num">3</span>
+                <span class="step__name">Календарь</span>
+            </div>
+            <div class="step__line"></div>
+            <div class="step">
+                <span class="step__num">4</span>
+                <span class="step__name">Контакты</span>
+            </div>
+            <div class="step__line"></div>
+            <div class="step">
+                <span class="step__num">5</span>
+                <span class="step__name">Подтверждение</span>
+            </div>
+        </div>
     </div>
-  </body>
+
+    <main class="main">
+        <div class="container">
+            <h1 class="main__title">Выберите дату и время</h1>
+
+            <div class="picker">
+                <section class="calendar">
+                    <div class="calendar__header">
+                        <span class="calendar__month" id="current-month"></span>
+                        <div class="calendar__controls">
+                            <button class="calendar__btn" id="prev-month" aria-label="Предыдущий месяц">‹</button>
+                            <button class="calendar__btn" id="next-month" aria-label="Следующий месяц">›</button>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar__weekdays">
+                        <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+                    </div>
+
+                    <div class="calendar__days" id="calendar-days"></div>
+                </section>
+
+                <section class="times">
+                    <h2 class="times__title">Доступное время</h2>
+                    <div class="times__grid" id="time-slots"></div>
+                </section>
+            </div>
+
+            <div class="actions">
+                <button class="btn">Назад</button>
+                <p class="actions__text" id="selected-info">
+                    Выберите дату и время
+                </p>
+                <button class="btn" id="next-btn">Далее</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <img src="images/logo.jpg" alt="Hair Salon" class="footer__logo">
+                    <p class="footer__desc">Стрижки, окрашивание, уход. Мастера своего дела, честные цены, отличное настроение. Ждём вас!</p>
+                </div>
+                <div class="footer__contacts">
+                    <h3 class="footer__title">Контакты</h3>
+                    <p>📍 ул. Садовая, 15, Москва</p>
+                    <p>📞 +7 (495) 123-45-67</p>
+                </div>
+                <div class="footer__hours">
+                    <h3 class="footer__title">Режим работы</h3>
+                    <p>Пн–Пт: 9:00 – 21:00</p>
+                    <p>Сб–Вс: 10:00 – 19:00</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2026. Все права защищены.</p>
+                <a href="#" class="footer__link">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
